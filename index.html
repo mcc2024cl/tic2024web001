@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Interactivo con Aston Martin</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #mapid {
+      height: 400px;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .bloque1,
+    .bloque2 {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <img src="https://hips.hearstapps.com/hmg-prod/images/aston-martin-amr23-14-1676316775.jpg?crop=0.883xw:0.663xh;0.0296xw,0.204xh&resize=1200:*" width="400" />
+  </center>
+  <br>
+
+  <div class="bloque1" id="b1" onmouseover="mostrarFecha()">
+    <h1>Aston Martin</h1>
+    <h2>Introducción</h2>
+    <p>Aston Martin es un fabricante de coches británico que ha participado en la Fórmula 1 de diversas maneras. La compañía participó por primera vez durante la temporada 1959 con el monoplaza DBR4, usando su propio motor, pero sin obtener puntos. Continuaron con malos resultados en la temporada 1960 nuevamente sin obtener puntos. Como resultado, Aston Martin decidió abandonar la Fórmula 1.</p>
+  </div>
+
+  <div class="bloque2" id="b2" style="display:none;">
+    <h2>Actualidad</h2>
+    <p>Aston Martin obtuvo su primer podio en Fórmula 1 en el Gran Premio de Azerbaiyán de esa temporada, de la mano de Vettel.12​ En agosto de 2022, Aston Martin confirmó como piloto al español Fernando Alonso, para la temporada 2023.13​ El 5 de marzo, en el primer Gran Premio de la temporada 2023 en Baréin, Fernando Alonso logró el segundo podio de la historia para Aston Martin. Se completó la temporada con varios podios.</p>
+    <ol>
+      <li>El Gran Premio de Baréin de 2023</li>
+      <li>El Gran Premio de Cánada de 2023</li>
+      <li>El Gran Premio de Brasil de 2023</li>
+    </ol>
+    <h2>Historia</h2>
+    <p>El debut en Fórmula 1 sucedió luego de buenos resultados de la automotriz en carreras de deportivos, incluyendo una victoria en las 24 Horas de Le Mans. Ocurrió en el Gran Premio de los Países Bajos de 1959, con dos Aston Martin DBR4 del equipo de nombre David Brown Corporation. Esa temporada reiteraron participación en Gran Bretaña, Portugal e Italia. Roy Salvadori obtuvo los mejores resultados del equipo en el campeonato, dos sextos lugares, además de un podio en un GP no puntuable.</p>
+    <ol>
+      <li><a href="https://es.wikipedia.org/wiki/Aston_Martin_en_F%C3%B3rmula_1">Wikiedia</a></li>
+      <li><a href="https://es.motorsport.com/">MotorSport</a></li>
+      <li><a href="https://www.marca.com/motor/formula1/clasificacion.html">Marca</a></li>
+    </ol>
+  </div>
+
+  <button id="botonGeo">Obtener ubicación</button>
+  <button id="botonMostrar">Mostrar bloque2</button>
+  <button id="botonOcultar">Ocultar bloque2</button>
+  <button id="botonfondo">Color Fondo</button>
+
+  <div>
+    <center>
+      <button id="botoncreditos">Créditos</button>
+    </center>
+  </div>
+
+  <p id="ubicacion">La ubicación aparecerá aquí.</p>
+
+  <div id="mapid"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="tuarchivo.js"></script>
+  <script src="geolocalizacion.js"></script>
+
+  <center>
+    <p><strong> Copyright 2023</strong></p>
+  </center>
+
+</body>
+
+</html>
